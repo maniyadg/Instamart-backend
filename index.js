@@ -21,7 +21,7 @@ const socket = require("socket.io")
 app.use(cookieParser());
 app.use(express.json())
 app.use(cors({
-  origin: 'https://master--friendly-narwhal-5df89d.netlify.app',
+  origin: 'https://master--friendly-narwhal-5df89d.netlify.app/',
   credentials:true,            //access-control-allow-credentials:true
   optionSuccessStatus:200
 }));// app.use(bodyParser.urlencoded({ extended: true }));
@@ -60,7 +60,7 @@ const server = app.listen(PORT, () => {
 
   const io = socket(server, {
     cors: {
-      origin: 'https://master--friendly-narwhal-5df89d.netlify.app',
+      origin: 'https://master--friendly-narwhal-5df89d.netlify.app/',
       credentials: true,
     },
   });
